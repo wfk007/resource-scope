@@ -1,0 +1,45 @@
+{
+  "name": "resource-scope",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "JavaScript resources auto run, collect and dispose",
+  "keywords": [
+    "resource",
+    "scope",
+    "resource-scope",
+    "ResourceScope"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wfk007/resource-scope.git"
+  },
+  "license": "MIT",
+  "author": "wangfukang",
+  "files": [
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
+  "main": "./lib/resource-scope.umd.js",
+  "module": "./lib/resource-scope.es.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/resource-scope.es.js"
+      },
+      "require": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/resource-scope.umd.js"
+      }
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.5.1",
+    "vite-plugin-dts": "^3.6.0"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  }
+}
